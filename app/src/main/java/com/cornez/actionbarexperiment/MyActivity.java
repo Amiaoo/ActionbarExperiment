@@ -15,7 +15,6 @@ public class MyActivity extends AppCompatActivity {
     private Fragment breakfastFragment;
     private Fragment lunchFragment;
     private Fragment snackFragment;
-    private Fragment dinnerFragment;
 
 
     @Override
@@ -30,19 +29,16 @@ public class MyActivity extends AppCompatActivity {
 
         //CREATE THE TAB AND BIND THEM TO THE ACTIONBAR
         ActionBar.Tab appetizerTab = actionBar.newTab().setText(
-                getString(R.string.ui_tabname_breakfast));
+                getString(R.string.ui_tabname_appetizer));
         ActionBar.Tab entreeTab = actionBar.newTab().setText(
-                getString(R.string.ui_tabname_lunch));
+                getString(R.string.ui_tabname_entree));
         ActionBar.Tab dessertTab = actionBar.newTab().setText(
-                getString(R.string.ui_tabname_snack));
-        ActionBar.Tab dinnerTab = actionBar.newTab().setText(
-                getString(R.string.ui_tabname_dinner));
+                getString(R.string.ui_tabname_dessert));
 
         //CREATE EACH FRAGMENT AND BIND THEM TO THE ACTIONBAR
         breakfastFragment = new Appetizer();
         snackFragment = new Dessert();
         lunchFragment = new Entree();
-       dinnerFragment = new DinnerFragment();
 
         //SET LISTENER EVENTS FOR EACH OF THE ACTIONBAR TABS
         appetizerTab.setTabListener(new
@@ -54,15 +50,11 @@ public class MyActivity extends AppCompatActivity {
         entreeTab.setTabListener(new
                 MyTabsListener(lunchFragment,
                 getApplicationContext()));
-        dinnerTab.setTabListener(new
-                MyTabsListener(dinnerFragment,
-                getApplicationContext()));
 
         //ADD EACH OF THE TABS TO THE ACTIONBAR
         actionBar.addTab(appetizerTab);
         actionBar.addTab(entreeTab);
         actionBar.addTab(dessertTab);
-        actionBar.addTab(dinnerTab);
 
         //RESTORE NAVIGATION
         if (savedInstanceState != null) {
