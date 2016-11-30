@@ -15,6 +15,7 @@ public class MyActivity extends AppCompatActivity {
     private Fragment breakfastFragment;
     private Fragment lunchFragment;
     private Fragment snackFragment;
+    private Fragment billFragment;
 
 
     @Override
@@ -34,11 +35,14 @@ public class MyActivity extends AppCompatActivity {
                 getString(R.string.ui_tabname_entree));
         ActionBar.Tab dessertTab = actionBar.newTab().setText(
                 getString(R.string.ui_tabname_dessert));
+        ActionBar.Tab billTab = actionBar.newTab().setText(
+                getString(R.string.ui_tabname_bill));
 
         //CREATE EACH FRAGMENT AND BIND THEM TO THE ACTIONBAR
         breakfastFragment = new Appetizer();
         snackFragment = new Dessert();
         lunchFragment = new Entree();
+        billFragment = new Bill();
 
         //SET LISTENER EVENTS FOR EACH OF THE ACTIONBAR TABS
         appetizerTab.setTabListener(new
@@ -50,11 +54,15 @@ public class MyActivity extends AppCompatActivity {
         entreeTab.setTabListener(new
                 MyTabsListener(lunchFragment,
                 getApplicationContext()));
+        billTab.setTabListener(new
+                MyTabsListener(billFragment,
+                getApplicationContext()));
 
         //ADD EACH OF THE TABS TO THE ACTIONBAR
         actionBar.addTab(appetizerTab);
         actionBar.addTab(entreeTab);
         actionBar.addTab(dessertTab);
+        actionBar.addTab(billTab);
 
         //RESTORE NAVIGATION
         if (savedInstanceState != null) {

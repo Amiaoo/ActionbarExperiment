@@ -20,10 +20,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" >
+        android:layout_centerHorizontal="true"
+        android:id="@+id/entree_choice">
 
         <RadioButton
-            android:text="Beef               $ 12.99"
+            android:text="Beef               $ 13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/entree_beef"
@@ -32,7 +33,7 @@
             android:textColor="@android:color/white" />
 
         <RadioButton
-            android:text="Chicken         $ 9.99"
+            android:text="Chicken         $ 10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/entree_chicken"
@@ -41,7 +42,7 @@
             app:buttonTint="@android:color/white" />
 
         <RadioButton
-            android:text="Shrimp           $ 10.99"
+            android:text="Shrimp           $ 11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/entree_shrimp"

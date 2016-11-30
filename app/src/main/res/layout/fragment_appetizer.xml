@@ -21,21 +21,21 @@
         android:id="@+id/appetizer_choice" >
 
         <RadioButton
-            android:text="Meatball     $ 4.99"
+            android:text="Meatball     $ 5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/appetizer_meatball"
             android:layout_weight="1" />
 
         <RadioButton
-            android:text="Salad           $ 3.99"
+            android:text="Salad           $ 4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/appetizer_salad"
             android:layout_weight="1" />
 
         <RadioButton
-            android:text="Soup            $ 2.99"
+            android:text="Soup            $ 3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/appetizer_soup"
